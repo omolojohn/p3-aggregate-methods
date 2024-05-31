@@ -30,7 +30,6 @@ class Course:
     def get_enrollments(self):
         return self._enrollments.copy()
 
-
 class Enrollment:
     all = []
     
@@ -41,7 +40,7 @@ class Enrollment:
             self._enrollment_date = datetime.now()
             type(self).all.append(self)
         else:
-            raise TypeError("Invalid types for student and/or course")
+            raise TypeError("Invalid types for student and/course")
 
     def get_enrollment_date(self):
         return self._enrollment_date
